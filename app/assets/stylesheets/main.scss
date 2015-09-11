@@ -1,0 +1,22 @@
+// This project follows the 7-1 Pattern
+// http://sass-guidelin.es/#the-7-1-pattern
+
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/functions';
+
+@import 'vendors/bootstrap';
+
+@import 'base/typography';
+
+@import 'layout/navigation';
+@import 'layout/header';
+@import 'layout/footer';
+
+@import 'components/buttons';
+
+@import 'pages/home';
+
+@import 'themes/theme';
+
+@import 'shame/shame';
