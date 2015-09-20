@@ -1,19 +1,20 @@
+/* eslint-disable no-console */
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config');
 
 new WebpackDevServer(webpack(config), {
-  contentBase: './app',
   publicPath: config.output.publicPath,
   hot: true,
   historyApiFallback: true,
+  noInfo: true,
+  headers: {'Access-Control-Allow-Origin': '*'},
   stats: {
     colors: true
   }
-}).listen(3000, 'localhost', function (err) {
+}).listen(config.devServerPort, 'localhost', function errorCallback(err) {
   if (err) {
-    console.log(err);
+    console.error(err);
   }
-
-  console.log('Listening at localhost:3000');
+  console.info('🚧 Webpack development server listening on port ' + config.devServerPort);
 });

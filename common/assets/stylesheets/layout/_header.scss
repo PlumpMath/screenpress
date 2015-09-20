@@ -1,0 +1,34 @@
+// header styles
+header {
+  @extend .clearfix;
+  height: 50px;
+  div.logo {
+    @extend .pull-left;
+    background: blue;
+    width: 100px;
+    height: 50px;
+  }
+  ul.navbar {
+    @extend .pull-right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    li {
+      display: inline-block;
+      a {
+        border: 1px solid #eee;
+        height: 40px;
+        line-height: 40px;
+        display: block;
+        padding: 0 10px;
+        color: $camelot;
+        margin: 0 2px 0 0;
+        &:hover {
+          background-color: $camelot;
+          color: white;
+        }
+      }
+    }
+  }
+}
