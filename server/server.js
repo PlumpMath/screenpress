@@ -9,7 +9,7 @@ import createLocation from 'history/lib/createLocation';
 import config from './config';
 
 import configureStore from '../common/store/configureStore';
-import routes from '../common/router/routes';
+import { routes } from '../common/routes';
 
 const app = new Express();
 const port = 3000;

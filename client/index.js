@@ -3,7 +3,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute } from 'react-router';
 import configureStore from '../common/store/configureStore';
-import RouterWrapper from '../common/router';
+import { routes } from '../common/routes';
 
 // history only used in client
 import { createHistory } from 'history';
@@ -20,7 +20,7 @@ React.render(
   // The child must be wrapped in a function
   // to work around an issue in React 0.13.
   <Provider store={store}>
-    {() => <RouterWrapper history={history} />}
+    {() => <Router history={history} routes={routes} />}
   </Provider>,
   rootElement
 );
