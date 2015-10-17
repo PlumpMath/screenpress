@@ -4,9 +4,13 @@ header {
   height: 50px;
   div.logo {
     @extend .pull-left;
-    background: blue;
-    width: 100px;
+    font-size: 18px;
+    width: auto;
     height: 50px;
+    line-height: 50px;
+    color: white;
+    padding: 0;
+    background-color: transparent;
   }
   ul.navbar {
     @extend .pull-right;
@@ -17,17 +21,21 @@ header {
     li {
       display: inline-block;
       a {
-        border: 1px solid #eee;
+        border: none;
         height: 40px;
         line-height: 40px;
         display: block;
         padding: 0 10px;
-        color: $camelot;
+        color: white;
         margin: 0 2px 0 0;
         &:hover {
-          background-color: $camelot;
-          color: white;
+          background-color: white;
+          color: $camelot;
+          text-decoration: underline;
         }
+      }
+      a.active {
+        text-decoration: underline;
       }
     }
   }

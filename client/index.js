@@ -1,6 +1,7 @@
 import 'babel-core/polyfill';
 import React from 'react';
 import { Provider } from 'react-redux';
+import { ReduxRouter, routerStateReducer, reduxReactRouter } from 'redux-router';
 import { Router, Route, IndexRoute } from 'react-router';
 import configureStore from '../common/store/configureStore';
 import { routes } from '../common/routes';

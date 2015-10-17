@@ -62,19 +62,20 @@ function handleRender(req, res) {
 
 function renderFullPage(html, initialState) {
   return `
-    <!doctype html>
-    <html>
-      <head>
-        <title>Screen Press</title>
-      </head>
-      <body>
-        <div id="app">${html}</div>
-        <script>
-          window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};
-        </script>
-        <script src="${config().assetHost}/dist/bundle.js"></script>
-      </body>
-    </html>
+<!doctype html>
+<html>
+<head>
+  <title>Screen Press</title>
+  <link type="text/css" rel="stylesheet" href="${config().assetHost}/dist/styles.css" />
+</head>
+<body>
+  <div id="app">${html}</div>
+  <script>
+    window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};
+  </script>
+  <script src="${config().assetHost}/dist/bundle.js"></script>
+</body>
+</html>
     `;
 }
 
