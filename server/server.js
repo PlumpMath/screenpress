@@ -3,6 +3,7 @@ import Express from 'express';
 import qs from 'qs';
 
 import React from 'react';
+import ReactDOMServer from 'react-dom/server';
 import { Provider } from 'react-redux';
 import { RoutingContext, match } from 'react-router';
 import createLocation from 'history/lib/createLocation';
@@ -48,9 +49,9 @@ function handleRender(req, res) {
       res.status(404).send('Not found')
     } else {
       // Render the component to a string with the RoutingContext
-      let html = React.renderToString(
+      let html = ReactDOMServer.renderToString(
         <Provider store={store}>
-          {() => <RoutingContext {...renderProps}/>}
+          <RoutingContext {...renderProps} />
         </Provider>
       );
       res.send(renderFullPage(html, finalState));
