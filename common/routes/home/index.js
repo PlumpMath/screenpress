@@ -1,3 +1,1 @@
-module.exports = {
-  component: require('./components/Home')
-};
+module.exports = require('./components/Home');
