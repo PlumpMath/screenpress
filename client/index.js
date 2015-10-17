@@ -1,5 +1,6 @@
 import 'babel-core/polyfill';
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ReduxRouter, routerStateReducer, reduxReactRouter } from 'redux-router';
 import { Router, Route, IndexRoute } from 'react-router';
@@ -17,11 +18,9 @@ const initialState = window.__INITIAL_STATE__;
 const store = configureStore(initialState);
 const rootElement = document.getElementById('app');
 
-React.render(
-  // The child must be wrapped in a function
-  // to work around an issue in React 0.13.
+ReactDOM.render(
   <Provider store={store}>
-    {() => <Router history={history} routes={routes} />}
+    <Router history={history} routes={routes} />
   </Provider>,
   rootElement
 );
