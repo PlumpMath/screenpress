@@ -1,4 +1,6 @@
+import Settings from './components/Settings';
+
 module.exports = {
   path: '/settings',
-  component: require('./components/Settings')
+  component: Settings
 };

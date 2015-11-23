@@ -1,1 +1,3 @@
-module.exports = require('./components/Home');
+import Home from './components/Home';
+
+module.exports = { component: Home };

@@ -1,16 +1,14 @@
 import path from 'path';
 import Express from 'express';
 import qs from 'qs';
-
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { Provider } from 'react-redux';
 import { RoutingContext, match } from 'react-router';
+import { routes } from '../common/routes';
 import createLocation from 'history/lib/createLocation';
 import config from './config';
-
 import configureStore from '../common/store/configureStore';
-import { routes } from '../common/routes';
 
 const app = new Express();
 const port = 3000;

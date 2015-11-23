@@ -1,4 +1,6 @@
+import Login from './components/Login';
+
 module.exports = {
-  path: '/login',
-  component: require('./components/Login')
+  path: 'login',
+  component: Login
 };
