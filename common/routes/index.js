@@ -12,6 +12,7 @@ export const routes = [
     childRoutes: [
       require('./login'),
       require('./signup'),
+      require('./books'),
       require('./settings')
     ]
   }

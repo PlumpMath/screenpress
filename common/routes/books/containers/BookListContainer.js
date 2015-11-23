@@ -1,20 +1,21 @@
+import BookList from '../components/BookList';
 import React, { Component, PropTypes } from 'react';
 
 export default class BookListContainer extends Component {
-
   constructor() {
     super();
-    this.state = { books: [] }
+    this.render = this.render.bind(this);
   }
 
   componentDidMount() {
-    // TODO: get from the server :)
-    this.setState({ books: books });
+    // do something here
   }
-  
-  render() {
-    return <BookList books={this.state.books} />;
-  }
-}
 
-}
+  render() {
+    var books = [
+      { id: 1, name: 'The Martian', description: 'Mark Watney is a Mars pirate.' },
+      { id: 2, name: 'The Girl With All the Gifts', description: 'Crazy.' }
+    ];
+    return <BookList books={books} />;
+  }
+};

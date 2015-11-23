@@ -1,4 +1,6 @@
+import BookListContainer from './containers/BookListContainer';
+
 module.exports = {
   path: '/books',
-  component: require('./components/BookListContainer')
+  component: BookListContainer
 };
