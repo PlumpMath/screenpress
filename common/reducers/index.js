@@ -1,17 +1,10 @@
 import { combineReducers } from 'redux';
 import { routeReducer } from 'redux-simple-router';
-
-// for now, don't handle any actions. just return the state given to us
-const blankReducer = function (state = {}, action) {
-  switch (action.type) {
-  default:
-    return state;
-  }
-};
+import books from './books';
 
 const rootReducer = combineReducers({
-  blankReducer: blankReducer,
-  routing: routeReducer
+  routing: routeReducer,
+  books: books
 });
 
 export default rootReducer;
