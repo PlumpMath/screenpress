@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router';
 
 export default class Book extends Component {
   constructor(props) {
@@ -10,8 +11,7 @@ export default class Book extends Component {
     var book = this.props.book;
     return (
       <div className="book">
-        <h2>{book.name}</h2>
-        <p>{book.description}</p>
+        <h2><Link to="/books/{book.id}">{book.title}</Link></h2>
       </div>
     );
   }
