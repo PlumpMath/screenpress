@@ -21,7 +21,7 @@ app.use(handleRender);
 
 function handleRender(req, res) {
   // history location
-  let location = createLocation(req.url);
+  const location = createLocation(req.url);
 
   // Read the counter from the request, if provided
   const params = qs.parse(req.query);
